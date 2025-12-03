@@ -1,17 +1,18 @@
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from "react"
+
+import { cn } from "@/lib/utils"
 
 export interface OrbitingCirclesProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children?: React.ReactNode;
-  reverse?: boolean;
-  duration?: number;
-  delay?: number;
-  radius?: number;
-  path?: boolean;
-  iconSize?: number;
-  speed?: number;
+  className?: string
+  children?: React.ReactNode
+  reverse?: boolean
+  duration?: number
+  delay?: number
+  radius?: number
+  path?: boolean
+  iconSize?: number
+  speed?: number
 }
 
 export function OrbitingCircles({
@@ -19,15 +20,13 @@ export function OrbitingCircles({
   children,
   reverse,
   duration = 20,
-  delay = 0, // ✅ Default delay = 0
   radius = 160,
   path = true,
   iconSize = 30,
   speed = 1,
   ...props
 }: OrbitingCirclesProps) {
-  const calculatedDuration = duration / speed;
-
+  const calculatedDuration = duration / speed
   return (
     <>
       {path && (
@@ -46,7 +45,7 @@ export function OrbitingCircles({
         </svg>
       )}
       {React.Children.map(children, (child, index) => {
-        const angle = (360 / React.Children.count(children)) * index;
+        const angle = (360 / React.Children.count(children)) * index
         return (
           <div
             style={
@@ -55,7 +54,6 @@ export function OrbitingCircles({
                 "--radius": radius,
                 "--angle": angle,
                 "--icon-size": `${iconSize}px`,
-                animationDelay: `${delay}s`, // ✅ Tambahkan ini!
               } as React.CSSProperties
             }
             className={cn(
@@ -67,8 +65,8 @@ export function OrbitingCircles({
           >
             {child}
           </div>
-        );
+        )
       })}
     </>
-  );
+  )
 }

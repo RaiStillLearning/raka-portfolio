@@ -145,11 +145,12 @@
 
 @keyframes orbit {
   0% {
-    transform: rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
+    transform: rotate(var(--angle)) translateX(var(--radius))
+      rotate(calc(-1 * var(--angle)));
   }
   100% {
-    transform: rotate(360deg) translateY(calc(var(--radius) * 1px))
-      rotate(-360deg);
+    transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius))
+      rotate(calc(-1 * (var(--angle) + 360deg)));
   }
 }
 

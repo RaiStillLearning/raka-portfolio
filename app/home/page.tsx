@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 
 //routes import section
 import AboutMe from "./about/page";
+import SkillSet from "./skills/page";
 
 export default function HeroSection() {
   return (
@@ -67,7 +68,6 @@ export default function HeroSection() {
         </section>
 
         {/* ================= ABOUT ================= */}
-        {/* ================= ABOUT ================= */}
         <motion.article
           id="about"
           className="min-h-screen w-full flex items-center justify-center px-6"
@@ -76,29 +76,21 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          {/* ✅ WRAPPER KIRI-KANAN */}
-          <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center gap-12">
-            {/* ✅ KIRI: ABOUT TEXT */}
-            <div className="w-full lg:w-1/2 flex justify-start">
-              <AboutMe />
-            </div>
+          <div className="w-full max-w-7xl flex items-center">
+            <AboutMe />
+          </div>
+        </motion.article>
 
-            {/* ✅ KANAN: ORBITING CIRCLES */}
-            <div className="w-full lg:w-1/2 flex justify-center items-center">
-              {/* <div className="relative h-[500px] w-[500px]">
-                <OrbitingCircles>
-                  <File />
-                  <Settings />
-                  <File />
-                </OrbitingCircles>
-                <OrbitingCircles radius={100} reverse>
-                  <File />
-                  <Settings />
-                  <File />
-                  <Search />
-                </OrbitingCircles>
-              </div> */}
-            </div>
+        <motion.article
+          id="skills"
+          className="min-h-screen w-full flex items-center justify-center px-6"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="w-full max-w-7xl flex items-center">
+            <SkillSet />
           </div>
         </motion.article>
       </div>
