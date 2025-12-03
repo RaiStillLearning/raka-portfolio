@@ -1,44 +1,67 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
+// ✅ Pakai ID, bukan href
 const navItems = [
-  { name: "Home", href: "/pages/home" },
-  { name: "About", href: "/home/about" },
-  { name: "Projects", href: "/home/projects" },
-  { name: "Contact", href: "/home/contact" },
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Skill", id: "skills" },
+  { name: "Projects", id: "projects" },
+  { name: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState("home");
+
+  // ✅ Smooth scroll dengan offset navbar
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const navbarHeight = 64; // h-16 = 64px
+    const elementPosition =
+      element.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementPosition - navbarHeight,
+      behavior: "smooth",
+    });
+
+    setActive(id);
+  };
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* LOGO */}
-        <Link 
-          href="/home" 
+        {/* ✅ LOGO */}
+        <button
+          onClick={() => handleScroll("home")}
           className="text-lg font-bold tracking-tight transition-colors hover:text-primary"
         >
           Rakha Arkana
-        </Link>
+        </button>
 
-        {/* DESKTOP MENU */}
+        {/* ✅ DESKTOP MENU */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = active === item.id;
 
             return (
-              <Link
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleScroll(item.id)}
                 className={`relative text-sm font-medium transition-all duration-200 ${
                   isActive
                     ? "text-foreground"
@@ -49,27 +72,23 @@ export default function Navbar() {
                 {isActive && (
                   <span className="absolute -bottom-[21px] left-0 right-0 h-0.5 bg-foreground" />
                 )}
-              </Link>
+              </button>
             );
           })}
 
-          {/* Theme Toggle Desktop */}
-          <AnimatedThemeToggler/>
+          <AnimatedThemeToggler />
 
-          <Button size="sm" className="ml-2">
-            Hire Me
-          </Button>
+          <ShinyButton>Hire Me</ShinyButton>
         </div>
 
-        {/* MOBILE MENU TRIGGER */}
+        {/* ✅ MOBILE MENU */}
         <div className="flex md:hidden items-center gap-2">
-          {/* Theme Toggle Mobile */}
           <AnimatedThemeToggler />
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 size="icon"
                 className="relative h-10 w-10"
                 aria-label="Open menu"
@@ -78,51 +97,47 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
 
-            <SheetContent 
-              side="right" 
-              className="w-full sm:w-[380px] px-0"
-            >
-              {/* Mobile Menu Header */}
+            <SheetContent side="right" className="w-full sm:w-[380px] px-0">
               <div className="flex items-center justify-between px-6 pb-6 border-b">
                 <SheetTitle className="text-lg font-bold">Menu</SheetTitle>
               </div>
 
-              {/* Mobile Menu Items */}
               <div className="flex flex-col px-6 py-6">
                 <div className="flex flex-col gap-1">
                   {navItems.map((item) => {
-                    const isActive = pathname === item.href;
+                    const isActive = active === item.id;
 
                     return (
-                      <Link
+                      <button
                         key={item.name}
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className={`group relative rounded-lg px-4 py-3 text-base font-medium transition-all duration-200 ${
+                        onClick={() => {
+                          handleScroll(item.id);
+                          setIsOpen(false);
+                        }}
+                        className={`group relative rounded-lg px-4 py-3 text-base font-medium transition-all duration-200 text-left ${
                           isActive
                             ? "bg-accent text-foreground"
                             : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
                         }`}
                       >
                         <span className="relative z-10">{item.name}</span>
+
                         {isActive && (
                           <span className="absolute left-0 top-1/2 h-8 w-1 -translate-y-1/2 rounded-r-full bg-foreground" />
                         )}
-                      </Link>
+                      </button>
                     );
                   })}
                 </div>
 
-                {/* CTA Button */}
                 <div className="mt-8 space-y-3">
-                  <Button 
+                  <Button
                     className="w-full h-12 text-base font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     Hire Me
                   </Button>
-                  
-                  {/* Optional: Social Links or Additional Info */}
+
                   <p className="text-center text-xs text-muted-foreground">
                     © 2025 Rakha Arkana
                   </p>
