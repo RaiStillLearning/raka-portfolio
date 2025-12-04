@@ -14,6 +14,8 @@ import { motion } from "framer-motion";
 //routes import section
 import AboutMe from "./about/page";
 import SkillSet from "./skills/page";
+import Projects from "./project/page";
+import ContactPage from "./contact/page";
 
 export default function HeroSection() {
   return (
@@ -92,6 +94,14 @@ export default function HeroSection() {
           <div className="w-full max-w-7xl flex items-center">
             <SkillSet />
           </div>
+        </motion.article>
+
+        {/* project section */}
+        <motion.article id="projects">
+          <Projects />
+        </motion.article>
+        <motion.article id="contact">
+          <ContactPage />
         </motion.article>
       </div>
     </>

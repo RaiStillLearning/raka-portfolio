@@ -16,13 +16,23 @@ const geistMono = Geist_Mono({
 
 // SEO METADATA YANG LEBIH LENGKAP
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rakhaarkana.com'), // Ganti dengan domain Anda
+  metadataBase: new URL("https://rakhaarkana.com"), // Ganti dengan domain Anda
   title: {
     default: "Rakha Arkana - Junior Web Developer Portfolio",
-    template: "%s | Rakha Arkana"
+    template: "%s | Rakha Arkana",
   },
-  description: "Junior Web Developer specializing in MERN Stack (MongoDB, Express, React, Node.js). View my projects, skills, and get in touch for web development opportunities.",
-  keywords: ["Rakha Arkana", "Web Developer", "MERN Stack", "React Developer", "Next.js", "Portfolio", "Junior Developer", "Full Stack Developer"],
+  description:
+    "Junior Web Developer specializing in MERN Stack (MongoDB, Express, React, Node.js). View my projects, skills, and get in touch for web development opportunities.",
+  keywords: [
+    "Rakha Arkana",
+    "Web Developer",
+    "MERN Stack",
+    "React Developer",
+    "Next.js",
+    "Portfolio",
+    "Junior Developer",
+    "Full Stack Developer",
+  ],
   authors: [{ name: "Rakha Arkana" }],
   creator: "Rakha Arkana",
   openGraph: {
@@ -31,22 +41,23 @@ export const metadata: Metadata = {
     url: "https://rakhaarkana.vercel.app",
     siteName: "Rakha Arkana Portfolio",
     title: "Rakha Arkana - Junior Web Developer",
-    description: "Junior Web Developer specializing in MERN Stack. Building modern, responsive web applications.",
+    description:
+      "Junior Web Developer specializing in MERN Stack. Building modern, responsive web applications.",
     images: [
       {
         url: "/og-image.png", // Buat gambar ini 1200x630px
         width: 1200,
         height: 630,
-        alt: "Rakha Arkana Portfolio"
-      }
-    ]
+        alt: "Rakha Arkana Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rakha Arkana - Junior Web Developer",
     description: "Junior Web Developer specializing in MERN Stack",
     images: ["/og-image.png"],
-    creator: "@rakhaarkana" // Ganti dengan handle Twitter Anda
+    creator: "@rakhaarkana", // Ganti dengan handle Twitter Anda
   },
   robots: {
     index: true,
@@ -72,23 +83,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         {/* Canonical URL */}
         <link rel="canonical" href="https://rakhaarkana.com" />
-        
+
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        
+
         {/* Manifest for PWA */}
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          {children}
+        {children}
       </body>
     </html>
   );
