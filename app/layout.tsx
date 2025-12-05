@@ -15,48 +15,48 @@ const geistMono = Geist_Mono({
 });
 
 // SEO METADATA YANG LEBIH LENGKAP
-export const metadata: Metadata = {
-  metadataBase: new URL("https://rakhaarkana.com"), // domain utama
+export const metadata = {
+  metadataBase: new URL("https://rakhaarkana.my.id"),
 
   title: {
-    default: "Rakha Arkana - Junior Web Developer Portfolio",
+    default: "Rakha Arkana – Junior Web Developer Portfolio",
     template: "%s | Rakha Arkana",
   },
 
   description:
-    "Junior Web Developer specializing in MERN Stack (MongoDB, Express, React, Node.js). View my projects, skills, and get in touch for web development opportunities.",
+    "Rakha Arkana – Junior Web Developer specializing in MERN Stack and modern web application development. Explore my skills, projects, and portfolio.",
 
   keywords: [
     "Rakha Arkana",
-    "Web Developer",
-    "MERN Stack",
+    "Junior Web Developer",
+    "MERN Stack Developer",
+    "Next.js Developer",
     "React Developer",
-    "Next.js Portfolio",
-    "Junior Developer",
-    "Full Stack Developer",
+    "Web Portfolio",
+    "Frontend Developer",
   ],
 
   openGraph: {
     type: "website",
-    url: "https://rakhaarkana.com",
-    siteName: "Rakha Arkana Portfolio",
-    title: "Rakha Arkana - Junior Web Developer",
+    url: "https://rakhaarkana.my.id",
+    title: "Rakha Arkana – Junior Web Developer",
     description:
-      "Junior Web Developer specializing in MERN Stack. Building modern, responsive web applications.",
+      "Explore Rakha Arkana’s portfolio as a MERN Stack and modern web developer.",
+    siteName: "Rakha Arkana Portfolio",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rakha Arkana Portfolio",
+        alt: "Rakha Arkana Portfolio OG Image",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Rakha Arkana - Junior Web Developer",
-    description: "Junior Web Developer specializing in MERN Stack",
+    title: "Rakha Arkana – Junior Web Developer",
+    description: "Explore my projects, skills, and experience.",
     images: ["/og-image.png"],
   },
 
@@ -66,18 +66,14 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
       "max-image-preview": "large",
+      "max-video-preview": -1,
       "max-snippet": -1,
     },
   },
 
   alternates: {
-    canonical: "/", // otomatis = https://domain.com/
-  },
-
-  verification: {
-    google: "your-google-verification-code",
+    canonical: "/", // otomatis → https://rakhaarkana.my.id
   },
 };
 
@@ -90,7 +86,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
         {/* Canonical URL */}
-        <link rel="canonical" href="https://rakhaarkana.com" />
+        <link rel="canonical" href="https://rakhaarkana.my.id" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
