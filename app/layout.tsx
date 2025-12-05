@@ -16,49 +16,50 @@ const geistMono = Geist_Mono({
 
 // SEO METADATA YANG LEBIH LENGKAP
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rakhaarkana.com"), // Ganti dengan domain Anda
+  metadataBase: new URL("https://rakhaarkana.com"), // domain utama
+
   title: {
     default: "Rakha Arkana - Junior Web Developer Portfolio",
     template: "%s | Rakha Arkana",
   },
+
   description:
     "Junior Web Developer specializing in MERN Stack (MongoDB, Express, React, Node.js). View my projects, skills, and get in touch for web development opportunities.",
+
   keywords: [
     "Rakha Arkana",
     "Web Developer",
     "MERN Stack",
     "React Developer",
-    "Next.js",
-    "Portfolio",
+    "Next.js Portfolio",
     "Junior Developer",
     "Full Stack Developer",
   ],
-  authors: [{ name: "Rakha Arkana" }],
-  creator: "Rakha Arkana",
+
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://rakhaarkana.vercel.app",
+    url: "https://rakhaarkana.com",
     siteName: "Rakha Arkana Portfolio",
     title: "Rakha Arkana - Junior Web Developer",
     description:
       "Junior Web Developer specializing in MERN Stack. Building modern, responsive web applications.",
     images: [
       {
-        url: "/og-image.png", // Buat gambar ini 1200x630px
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Rakha Arkana Portfolio",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Rakha Arkana - Junior Web Developer",
     description: "Junior Web Developer specializing in MERN Stack",
     images: ["/og-image.png"],
-    creator: "@rakhaarkana", // Ganti dengan handle Twitter Anda
   },
+
   robots: {
     index: true,
     follow: true,
@@ -70,10 +71,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
+  alternates: {
+    canonical: "/", // otomatis = https://domain.com/
+  },
+
   verification: {
-    google: "your-google-verification-code", // Dari Google Search Console
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
+    google: "your-google-verification-code",
   },
 };
 
