@@ -100,6 +100,23 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Rakha Arkana",
+              url: "https://rakhaarkana.my.id",
+              image: "https://rakhaarkana.my.id/og-image.png",
+              jobTitle: "Junior Web Developer",
+              sameAs: [
+                "https://github.com/rakhaarkana",
+                "https://linkedin.com/in/rakhaarkana",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
