@@ -91,8 +91,10 @@ const ProjectPage = () => {
             </CardContent>
 
             <CardFooter>
-              <Button type="button" disabled className="w-full">
-                <Link href="">Dalam Pengerjaan</Link>
+              <Button type="button" className="w-full">
+                <Link href="https://briquette-nusantara.vercel.app/">
+                  Dalam Pengerjaan
+                </Link>
               </Button>
             </CardFooter>
           </Card>
