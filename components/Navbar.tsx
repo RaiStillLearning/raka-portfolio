@@ -11,6 +11,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import Link from "next/link";
 
 // ✅ Pakai ID, bukan href
 const navItems = [
@@ -78,7 +79,14 @@ export default function Navbar() {
 
           <AnimatedThemeToggler />
 
-          <ShinyButton>Hire Me</ShinyButton>
+          <a
+            href="https://kamar-programmer.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center"
+          >
+            <ShinyButton>GET IN TOUCH</ShinyButton>
+          </a>
         </div>
 
         {/* ✅ MOBILE MENU */}
@@ -131,12 +139,16 @@ export default function Navbar() {
                 </div>
 
                 <div className="mt-8 space-y-3">
-                  <Button
-                    className="w-full h-12 text-base font-medium"
-                    onClick={() => setIsOpen(false)}
+                  <a
+                    href="https://kamar-programmer.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
                   >
-                    Hire Me
-                  </Button>
+                    <ShinyButton className="w-full h-12 text-base font-medium items-center">
+                      GET IN TOUCH
+                    </ShinyButton>
+                  </a>
 
                   <p className="text-center text-xs text-muted-foreground">
                     © 2025 Rakha Arkana

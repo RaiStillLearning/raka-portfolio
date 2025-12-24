@@ -76,7 +76,7 @@ const ProjectPage = () => {
             <CardContent className="space-y-4">
               <div className="w-full">
                 <Image
-                  src="/project/briquette-nusantara.png"
+                  src="/project/indoexpor.png"
                   alt="briket nusantara"
                   width={500}
                   height={500}
@@ -85,16 +85,15 @@ const ProjectPage = () => {
               </div>
 
               <CardDescription>
-                Menggunakan Nextjs serta library populer untuk tampilan yang
-                modern dan juga interaktif.
+                Menggunakan Reactjs Vite serta library populer untuk tampilan yang
+                modern dan juga interaktif. serta API google map untuk menampilkan
+                lokasi perusahaan.
               </CardDescription>
             </CardContent>
 
             <CardFooter>
               <Button asChild className="w-full">
-                <Link href="https://briquette-nusantara.vercel.app/">
-                  Dalam Pengerjaan
-                </Link>
+               <a href="https://indoexporsolutions.vercel.app/" target="_blank">Kunjungi</a>
               </Button>
             </CardFooter>
           </Card>
@@ -109,8 +108,8 @@ const ProjectPage = () => {
             <CardContent className="space-y-4">
               <div className="w-full">
                 <Image
-                  src="/project/rumpi.png"
-                  alt="rumpi chat app"
+                  src="/project/company-1.png"
+                  alt="Project company profile"
                   width={500}
                   height={500}
                   className="rounded-lg w-full h-auto"
@@ -118,14 +117,13 @@ const ProjectPage = () => {
               </div>
 
               <CardDescription>
-                Menggunakan NextJS untuk front end dan Express untuk backend
-                serta database mongodb yang memunculkan message secara realtime.
+                Menggunakan NextJS untuk tampilan yang modern. serta pemahaman SSR dan CSR untuk mengoptimalkan website agar tetap stabil dan tidak load terus menerus.
               </CardDescription>
             </CardContent>
 
             <CardFooter>
-              <Button type="button" disabled className="w-full">
-                <Link href="">Dalam Pengerjaan</Link>
+              <Button type="button" className="w-full">
+                <a href="https://company-1-two.vercel.app/" target="_blank">Kunjungi</a>
               </Button>
             </CardFooter>
           </Card>
