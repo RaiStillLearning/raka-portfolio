@@ -102,7 +102,7 @@ const ProjectPage = () => {
           {/* CARD 3 */}
           <Card className="w-full lg:w-1/2">
             <CardHeader>
-              <CardTitle>Rumpi Chat</CardTitle>
+              <CardTitle>Company Profile</CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4">
