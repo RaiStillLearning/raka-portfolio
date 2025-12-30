@@ -80,7 +80,7 @@ export default function Navbar() {
           <AnimatedThemeToggler />
 
           <a
-            href="https://kamar-programmer.vercel.app/"
+            href="https://www.kamarprogrammer.site/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center"
