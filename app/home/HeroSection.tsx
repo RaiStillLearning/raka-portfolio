@@ -37,7 +37,9 @@ export default function HeroSection() {
               className="w-full lg:flex-1 flex flex-col items-center justify-center gap-4"
             >
               {/* ✅ MORPHING TEXT DI ATAS */}
-              <MorphingText texts={["Rakha", "Arkana"]} />
+              <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
+                Rakha Arkana
+              </h1>
 
               {/* ✅ TEXT ANIMATE DI BAWAHNYA */}
               <TextAnimate animation="slideLeft" by="character">
