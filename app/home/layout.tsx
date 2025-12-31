@@ -54,7 +54,7 @@ export default function HomeLayout({
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground text-center">
-            Contact Person: +62 877-4281-4702
+            Contact Person: +62 852-1060-1398
           </p>
           <p className="text-sm text-muted-foreground text-center">
             © 2025 Rakha Arkana
