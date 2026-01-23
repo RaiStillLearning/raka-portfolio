@@ -11,7 +11,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import Link from "next/link";
+// import Link from "next/link";
 
 // ✅ Pakai ID, bukan href
 const navItems = [
