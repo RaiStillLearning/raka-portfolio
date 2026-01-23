@@ -24,7 +24,9 @@ const ProjectPage = () => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Title Section */}
         <div className="flex justify-center mb-12">
-          <SparklesText>My Projects</SparklesText>
+          <SparklesText className="text-2xl sm:text-3xl md:text-4xl">
+            My Project
+          </SparklesText>
         </div>
 
         {/* Cards Section */}
@@ -70,7 +72,9 @@ const ProjectPage = () => {
           {/* CARD 2 */}
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">Catalog website briket</CardTitle>
+              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">
+                Catalog website briket
+              </CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4">
@@ -107,7 +111,9 @@ const ProjectPage = () => {
           {/* CARD 3 */}
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">Company Profile</CardTitle>
+              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">
+                Company Profile
+              </CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4">
@@ -171,7 +177,9 @@ const ProjectPage = () => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Title Section */}
         <div className="flex justify-center mb-12 text-center">
-          <SparklesText>My Certifications</SparklesText>
+          <SparklesText className="text-2xl sm:text-3xl md:text-4xl">
+            My Certifications
+          </SparklesText>
         </div>
 
         {/* Cards Section */}
@@ -179,7 +187,9 @@ const ProjectPage = () => {
           {/* CARD 1 */}
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">Debugging Competition PNBIT Bali 2025</CardTitle>
+              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">
+                Debugging Competition PNBIT Bali 2025
+              </CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4">
@@ -215,7 +225,9 @@ const ProjectPage = () => {
           {/* CARD 2 */}
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">Catalog website briket</CardTitle>
+              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">
+                Catalog website briket
+              </CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4">
@@ -253,7 +265,9 @@ const ProjectPage = () => {
           {/* CARD 3 */}
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">Dumet Fullstack</CardTitle>
+              <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">
+                Dumet Fullstack
+              </CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4">
