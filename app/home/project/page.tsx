@@ -226,7 +226,7 @@ const ProjectPage = () => {
           <Card className="w-full">
             <CardHeader>
               <CardTitle className="text-base sm:text-lg lg:text-xl leading-snug">
-                Catalog website briket
+                Beasiswa DICODING X DBS Foundation
               </CardTitle>
             </CardHeader>
 
