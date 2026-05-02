@@ -96,11 +96,12 @@ const ProjectPage = () => {
             </CardContent>
 
             <CardFooter>
-              <Button asChild className="w-full min-h-[44px]">
-                <a
-                  href="https://indoexporsolutions.vercel.app/"
-                  target="_blank"
-                >
+              <Button
+                asChild
+                className="w-full min-h-[44px] disabled:pointer-events-none"
+                disabled
+              >
+                <a href="" target="_blank">
                   Kunjungi
                 </a>
               </Button>
@@ -135,10 +136,8 @@ const ProjectPage = () => {
             </CardContent>
 
             <CardFooter>
-              <Button type="button" className="w-full min-h-[44px]">
-                <a href="https://company-1-two.vercel.app/" target="_blank">
-                  Kunjungi
-                </a>
+              <Button type="button" className="w-full min-h-[44px]" disabled>
+                <a href="https://company-1-two.vercel.app/">Kunjungi</a>
               </Button>
             </CardFooter>
           </Card>
